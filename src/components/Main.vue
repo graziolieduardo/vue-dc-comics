@@ -9,8 +9,8 @@
             <div class="wrapper">
                 <ul>
                     <li v-for="(icon, index) in icons" :key="index">
-                        <img :src="require(`../assets/${icon.imgPath + icon.description + icon.extension}`)" alt="">
                         <a :href="icon.url">
+                            <img :src="require(`../assets/${icon.imgPath + icon.description + icon.extension}`)" alt="">
                             {{ icon.description }}
                         </a>
                     </li>
@@ -101,19 +101,20 @@ export default {
                 padding: 20px;
 
                 li {
-                    display: flex;
-                    align-items: center;
                     height: 100%;
 
-                    img {
-                        width: 40px;
-                        margin-right: 10px;
-                    }
-
                     a {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
                         text-transform: uppercase;
                         color: #fff;
                         font-size: 14px;
+                        
+                        img {
+                            width: 40px;
+                            margin-right: 10px;
+                        }
                     }
                 }
             }

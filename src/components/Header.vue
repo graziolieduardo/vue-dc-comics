@@ -74,14 +74,11 @@ export default {
             font-size: 12px;
 
             ul {
-                display: flex;
-                align-items: center;
                 height: 100%;
 
                 li {
-                    display: flex;
-                    align-items: center;
-                    height: 100%;
+                    display: inline-block;
+                    line-height: 117px;
                     margin: 0 15px;
                     text-transform: uppercase;
 
@@ -98,6 +95,9 @@ export default {
                     }
 
                     a {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
                         color: $secondary-darkgray;
     
                         &:hover {
