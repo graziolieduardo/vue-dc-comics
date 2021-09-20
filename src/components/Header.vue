@@ -8,8 +8,8 @@
                 </div>
                 <div class="nav-container">
                     <ul>
-                        <li v-for="(link, index) in links" :key="index">
-                            <a :href="link.url" :class="(link.active) ? 'active' : null">
+                        <li v-for="(link, index) in links" :key="index" :class="(link.active) ? 'active' : null">
+                            <a :href="link.url">
                                 {{ link.text }}
                             </a>
                         </li>
@@ -69,29 +69,44 @@ export default {
         }
 
         .nav-container {
-            display: flex;
-            align-items: center;
             width: 60%;
             height: 100%;
-            padding: 20px;
             font-size: 12px;
 
-            li {
-                display: inline-block;
-                margin: 15px;
-                text-transform: uppercase;
+            ul {
+                display: flex;
+                align-items: center;
+                height: 100%;
 
-                a {
-                    color: $secondary-darkgray;
+                li {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    margin: 0 15px;
+                    text-transform: uppercase;
 
                     &.active {
-                        color: $primary-blue;
+                        border-bottom: 3px solid $primary-blue;
+
+                        a {
+                            color: $primary-blue;
+                        }
                     }
+
                     &:hover {
-                        color: $primary-blue;
+                        border-bottom: 3px solid $primary-blue;
+                    }
+
+                    a {
+                        color: $secondary-darkgray;
+    
+                        &:hover {
+                            color: $primary-blue;
+                        }
                     }
                 }
             }
+
         }
     }
 </style>
