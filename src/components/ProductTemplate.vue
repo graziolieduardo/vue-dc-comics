@@ -21,12 +21,13 @@ export default {
 
         .product-card {
             width: 100%;
+            aspect-ratio: 1/1;
     
             img {
                 width: 100%;
-                max-height: 200px;
+                height: 100%;
                 object-fit: cover;
-                object-position: 100% 0%;
+                object-position: top;
             }
     
             span {

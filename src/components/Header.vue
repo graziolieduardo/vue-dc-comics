@@ -21,13 +21,13 @@
 </template>
 
 <script>
-import Links from '@/assets/js/nav-list'
+import { headerLinks } from '@/assets/data/links-list.js'
 
 export default {
     name: 'Header',
     data() {
         return {
-            links: Links
+            links: headerLinks
         }
     }
 }
@@ -81,6 +81,7 @@ export default {
                     line-height: 117px;
                     margin: 0 15px;
                     text-transform: uppercase;
+                    font-weight: 600;
 
                     &.active {
                         border-bottom: 3px solid $primary-blue;
